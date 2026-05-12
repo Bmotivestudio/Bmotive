@@ -1,0 +1,158 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.js)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.css)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.(woff2|woff|ttf|otf))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.(jpg|jpeg|png|gif|ico|svg|webp))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=172800"
+        },
+        {
+          "key": "X-Cache-Strategy",
+          "value": "SSG-Revalidate"
+        },
+        {
+          "key": "X-Revalidate",
+          "value": "86400"
+        }
+      ]
+    },
+    {
+      "source": "/servizi(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=172800"
+        },
+        {
+          "key": "X-Cache-Strategy",
+          "value": "SSG-Revalidate"
+        },
+        {
+          "key": "X-Revalidate",
+          "value": "86400"
+        }
+      ]
+    },
+    {
+      "source": "/chi-siamo(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, s-maxage=604800, stale-while-revalidate=1209600"
+        },
+        {
+          "key": "X-Cache-Strategy",
+          "value": "SSG-Revalidate"
+        },
+        {
+          "key": "X-Revalidate",
+          "value": "604800"
+        }
+      ]
+    },
+    {
+      "source": "/contatti(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=172800"
+        },
+        {
+          "key": "X-Cache-Strategy",
+          "value": "SSG-Revalidate"
+        },
+        {
+          "key": "X-Revalidate",
+          "value": "86400"
+        }
+      ]
+    },
+    {
+      "source": "/portfolio(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=172800"
+        },
+        {
+          "key": "X-Cache-Strategy",
+          "value": "SSG-Revalidate"
+        },
+        {
+          "key": "X-Revalidate",
+          "value": "86400"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/((?!api/.*).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

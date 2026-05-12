@@ -1,0 +1,50 @@
+# Configurazione SSG ottimizzata per Bmotive Studio
+
+[build]
+  publish = "dist/public"
+  command = "npm run build"
+
+# Headers per SSG con revalidation
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, s-maxage=86400, stale-while-revalidate=172800"
+    X-Cache-Strategy = "SSG-Revalidate"
+    X-Revalidate = "86400"
+
+[[headers]]
+  for = "/servizi/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, s-maxage=86400, stale-while-revalidate=172800"
+    X-Cache-Strategy = "SSG-Revalidate"
+    X-Revalidate = "86400"
+
+[[headers]]
+  for = "/chi-siamo/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, s-maxage=604800, stale-while-revalidate=1209600"
+    X-Cache-Strategy = "SSG-Revalidate"
+    X-Revalidate = "604800"
+
+[[headers]]
+  for = "/contatti/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, s-maxage=86400, stale-while-revalidate=172800"
+    X-Cache-Strategy = "SSG-Revalidate"
+    X-Revalidate = "86400"
+
+[[headers]]
+  for = "/portfolio/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, s-maxage=86400, stale-while-revalidate=172800"
+    X-Cache-Strategy = "SSG-Revalidate"
+    X-Revalidate = "86400"
+
+
+# Redirects
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+  force = true
