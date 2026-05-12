@@ -46,7 +46,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(woff2|woff|ttf|otf))",
+      "source": "/(.+\\.(woff2|woff|ttf|otf))",
       "headers": [
         {
           "key": "Cache-Control",
