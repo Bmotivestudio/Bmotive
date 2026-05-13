@@ -1,5 +1,4 @@
-{
-  "headers": [
+"headers": [
     {
       "source": "/(.*)",
       "headers": [
@@ -55,7 +54,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(jpg|jpeg|png|gif|ico|svg|webp))",
+      "source": "/images/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
